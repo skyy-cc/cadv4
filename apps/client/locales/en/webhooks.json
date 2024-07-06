@@ -24,7 +24,7 @@
     "panicButtonDescription": "Unit {unit} has pressed the panic button."
   },
   "Calls": {
-    "callCreated": "911 Call Created",
+    "callCreated": "Call Created",
     "viewMoreInfo": "View more information on the CAD.",
     "location": "Location",
     "caller": "Caller",

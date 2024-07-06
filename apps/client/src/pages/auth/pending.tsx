@@ -6,7 +6,6 @@ import { Alert, Button } from "@snailycad/ui";
 import { getSessionUser } from "lib/auth";
 import { useAuth } from "context/AuthContext";
 import { Title } from "components/shared/Title";
-import { VersionDisplay } from "components/shared/VersionDisplay";
 import { Rank, WhitelistStatus } from "@snailycad/types";
 import { canUseThirdPartyConnections } from "lib/utils";
 import { useFeatureEnabled } from "hooks/useFeatureEnabled";
@@ -16,7 +15,7 @@ import { useRouter } from "next/router";
 import { Nav } from "components/shared/nav/Nav";
 
 export default function AccountPendingPage() {
-  const { user, cad } = useAuth();
+  const { user } = useAuth();
 
   const router = useRouter();
   const t = useTranslations("Auth");
@@ -107,16 +106,6 @@ export default function AccountPendingPage() {
             <p>{t("noThirdPartyConnections")}</p>
           )}
         </div>
-        <VersionDisplay cad={cad} />
-
-        <a
-          rel="noreferrer"
-          target="_blank"
-          className="mt-3 md:mt-0 relative md:absolute md:bottom-10 md:left-1/2 md:-translate-x-1/2 underline text-lg transition-colors text-neutral-700 hover:text-neutral-900 dark:text-gray-400 dark:hover:text-white mx-2 block cursor-pointer z-50"
-          href="https://snailycad.org"
-        >
-          SnailyCAD
-        </a>
       </main>
     </>
   );

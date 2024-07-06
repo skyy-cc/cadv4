@@ -35,7 +35,6 @@ const buttons: modalButtons.ModalButton[] = [
   modalButtons.plateSearchBtn,
   modalButtons.weaponSearchBtn,
   modalButtons.businessSearchBtn,
-  modalButtons.customFieldSearchBtn,
   modalButtons.create911CallBtn,
   modalButtons.createWrittenWarningBtn,
   modalButtons.createTicketBtn,
@@ -43,7 +42,6 @@ const buttons: modalButtons.ModalButton[] = [
   modalButtons.createWarrantBtn,
   modalButtons.createBoloBtn,
   modalButtons.notepadBtn,
-  modalButtons.departmentInformationBtn,
 ];
 
 export function ModalButtons({ initialActiveOfficer }: { initialActiveOfficer: ActiveOfficer }) {

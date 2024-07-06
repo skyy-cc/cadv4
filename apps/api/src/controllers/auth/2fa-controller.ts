@@ -68,7 +68,7 @@ export class UserTwoFactorAuthenticationController {
       },
     });
 
-    const keyUri = authenticator.keyuri(user.username, "SnailyCADv4", secret);
+    const keyUri = authenticator.keyuri(user.username, "KCDOJRP CAD", secret);
     const dataUri = await qrcode.toDataURL(keyUri);
 
     return { qrCode: dataUri, totpCode: secret };

@@ -103,7 +103,7 @@
     "release": "Release",
     "noImprisonedCitizens": "There are no citizens arrested.",
     "bailPostedBy": "Bail Posted by",
-    "noPenalCodesSelected": "No penal codes selected yet.",
+    "noPenalCodesSelected": "Loading penal codes... Please wait...",
     "penalCode": "Penal Code",
     "total": "Total",
     "fines": "Fines",

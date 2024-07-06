@@ -66,11 +66,6 @@ export function OfficerDropdown() {
       show: hasPermissions([Permissions.Leo]),
     },
     {
-      name: t("incidents"),
-      href: "/officer/incidents",
-      show: hasPermissions([Permissions.ManageIncidents, Permissions.ViewIncidents]),
-    },
-    {
       name: t("impoundLot"),
       href: "/officer/impound-lot",
       show: hasPermissions([Permissions.ManageImpoundLot, Permissions.ViewImpoundLot]),

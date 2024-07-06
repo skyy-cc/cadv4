@@ -1,7 +1,6 @@
 import * as React from "react";
 import { useTranslations } from "use-intl";
 import { Button, Droppable, FullDate } from "@snailycad/ui";
-import { useActiveDispatchers } from "hooks/realtime/use-active-dispatchers";
 import { Table, useTableState } from "components/shared/Table";
 import { yesOrNoText } from "lib/utils";
 import { ModalIds } from "types/modal-ids";
@@ -40,7 +39,6 @@ export function ActiveIncidents() {
 
   const t = useTranslations("Leo");
   const common = useTranslations("Common");
-  const { hasActiveDispatchers } = useActiveDispatchers();
   const modalState = useModal();
   const { state, execute } = useFetch();
   const draggingUnit = useDispatchState((state) => state.draggingUnit);
@@ -104,11 +102,6 @@ export function ActiveIncidents() {
     }
   }
 
-  function handleCreateIncident() {
-    modalState.openModal(ModalIds.ManageIncident);
-    setTempIncident("create");
-  }
-
   return (
     <div className="mb-3 rounded-md card">
       <header className="flex items-center justify-between p-2 px-4 bg-gray-200 dark:bg-secondary">
@@ -116,14 +109,7 @@ export function ActiveIncidents() {
 
         {isDispatch ? (
           <div>
-            <Button
-              variant={null}
-              className="bg-gray-500 hover:bg-gray-600 dark:border dark:border-quinary dark:bg-tertiary dark:hover:brightness-125 text-white"
-              onPress={handleCreateIncident}
-              disabled={!hasActiveDispatchers}
-            >
-              {t("createIncident")}
-            </Button>
+
           </div>
         ) : null}
       </header>

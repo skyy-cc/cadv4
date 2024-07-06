@@ -77,7 +77,7 @@ export function Nav({ maxWidth, isAccountPending }: Props) {
                     </Head>
                     <ImageWrapper
                       quality={80}
-                      alt={cad?.name || "SnailyCAD"}
+                      alt={cad?.name || "KC CAD"}
                       width={30}
                       height={30}
                       className="max-h-[30px] min-w-[30px]"
@@ -86,7 +86,7 @@ export function Nav({ maxWidth, isAccountPending }: Props) {
                     />
                   </>
                 ) : null}
-                {cad?.name || "SnailyCAD"}
+                {cad?.name || "KC CAD"}
               </a>
             </h1>
 

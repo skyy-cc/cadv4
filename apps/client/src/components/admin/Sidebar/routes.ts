@@ -55,7 +55,7 @@ export const managementRoutes: SidebarRoute[] = [
   },
   {
     type: "AUDIT_LOGS",
-    permissions: defaultPermissions.allDefaultAdminPermissions,
+    permissions: [Permissions.ManageCADSettings],
   },
 ];
 

@@ -52,8 +52,8 @@
     "speechVoice": "Speech Voice",
     "otherSounds": "Other Sounds",
     "unavailableSounds": "Unavailable Sounds",
-    "unavailableSoundsMessage": "These sounds are unavailable. They must be added by an admin.",
-    "userApiTokenDescription": "This token can be used to communicate with SnailyCAD's API.",
+    "unavailableSoundsMessage": "These sounds are unavailable for you!",
+    "userApiTokenDescription": "This token can be used to communicate with KCDOJRP CAD's API.",
     "developerMode": "Developer Mode",
     "statusViewDescription": "How the color of a status code (10-code) is displayed in the active units table."
   },

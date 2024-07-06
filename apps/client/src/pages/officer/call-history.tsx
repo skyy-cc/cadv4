@@ -63,12 +63,6 @@ export default function CallHistory({ data, incidents }: Props) {
   const common = useTranslations("Common");
   const { generateCallsign } = useGenerateCallsign();
 
-  function handleLinkClick(call: Full911Call) {
-    callState.setTempId(call.id);
-    modalState.openModal(ModalIds.LinkCallToIncident);
-    setCurrentlySelectedCall(call);
-  }
-
   function handleViewClick(call: Full911Call) {
     callState.setTempId(call.id);
     modalState.openModal(ModalIds.Manage911Call);
@@ -157,11 +151,6 @@ export default function CallHistory({ data, incidents }: Props) {
                 createdAt: <FullDate>{call.createdAt}</FullDate>,
                 actions: (
                   <>
-                    {hasManagePermissions ? (
-                      <Button onPress={() => handleLinkClick(call)} size="xs">
-                        {leo("linkToIncident")}
-                      </Button>
-                    ) : null}
                     <Button className="ml-2" onPress={() => handleViewClick(call)} size="xs">
                       {leo("viewCall")}
                     </Button>

@@ -159,7 +159,7 @@
   "LawBook": {
     "lawBook": "Law Book",
     "warningApplicable": "Warning Applicable",
-    "noPenalCodes": "No penal code has been registered",
+    "noPenalCodes": "Loading penal codes... Please wait...",
     "warningNotApplicable": "Warning Not Applicable",
     "fines": "Fines",
     "bail": "Bail",

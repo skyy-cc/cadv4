@@ -17,7 +17,6 @@ import { AuthScreenImages } from "components/auth/auth-screen-images";
 import { useFeatureEnabled } from "hooks/useFeatureEnabled";
 import { LocalhostDetector } from "components/auth/localhost-detector";
 import { parseCookies } from "nookies";
-import { VersionDisplay } from "components/shared/VersionDisplay";
 import type { PostRegisterUserData } from "@snailycad/types/api";
 
 import { GoogleReCaptchaProvider, useGoogleReCaptcha } from "react-google-recaptcha-v3";
@@ -199,16 +198,6 @@ function Register({ cad, CORS_ORIGIN_URL, isLocalhost, isCORSError }: Props) {
             </Form>
           )}
         </Formik>
-        <VersionDisplay cad={cad} />
-
-        <a
-          rel="noreferrer"
-          target="_blank"
-          className="mt-3 md:mt-0 relative md:absolute md:bottom-10 md:left-1/2 md:-translate-x-1/2 underline text-lg transition-colors text-neutral-700 hover:text-neutral-900 dark:text-gray-400 dark:hover:text-white mx-2 block cursor-pointer z-50"
-          href="https://snailycad.org"
-        >
-          SnailyCAD
-        </a>
       </main>
     </>
   );

@@ -13,8 +13,6 @@ import {
   DropdownMenuLinkItem,
   DropdownMenuTrigger,
 } from "@snailycad/ui";
-import { ModalIds } from "types/modal-ids";
-import { useModal } from "state/modalState";
 import dynamic from "next/dynamic";
 
 const ChangelogModal = dynamic(async () => (await import("../changelog-modal")).ChangelogModal, {
@@ -31,7 +29,6 @@ export function AccountDropdown(props: AccountDropdownProps) {
   const { user, setUser, cad } = useAuth();
   const router = useRouter();
   const t = useTranslations("Nav");
-  const modalState = useModal();
 
   async function handleLogout() {
     const success = await logout();
@@ -67,26 +64,6 @@ export function AccountDropdown(props: AccountDropdownProps) {
           )}
           <DropdownMenuItem onClick={handleLogout}>{t("logout")}</DropdownMenuItem>
           <hr className="my-2 mx-2 border-t border-secondary dark:border-quinary" />
-
-          {cad?.version ? (
-            <>
-              <div className="px-1 py-1">
-                <p className="text-gray-900 dark:text-gray-200 block w-full px-3 py-1.5 text-base cursor-default">
-                  v{cad.version.currentVersion}
-                  <br /> {cad.version.currentCommitHash}
-                </p>
-              </div>
-
-              <hr className="my-2 mx-2 border-t border-secondary dark:border-quinary" />
-
-              <DropdownMenuItem
-                className="flex items-center gap-2"
-                onClick={() => modalState.openModal(ModalIds.Changelog)}
-              >
-                {t("whatsNew")}
-              </DropdownMenuItem>
-            </>
-          ) : null}
         </DropdownMenuContent>
       </DropdownMenu>
 

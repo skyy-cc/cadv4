@@ -5,11 +5,8 @@ import { getTranslations } from "lib/getTranslation";
 import { requestAll } from "lib/utils";
 import type { GetServerSideProps } from "next";
 import { useTranslations } from "use-intl";
-import { useModal } from "state/modalState";
-import { Button } from "@snailycad/ui";
-import { ModalIds } from "types/modal-ids";
 import { Title } from "components/shared/Title";
-import { usePermission, Permissions } from "hooks/usePermission";
+import { Permissions } from "hooks/usePermission";
 import type { GetEmsFdActiveDeputy, GetIncidentsData } from "@snailycad/types/api";
 
 import { useEmsFdState } from "state/ems-fd-state";
@@ -22,10 +19,7 @@ interface Props {
 
 export default function EmsFdIncidents({ activeDeputy, incidents: initialData }: Props) {
   const t = useTranslations("Leo");
-  const modalState = useModal();
   const setActiveDeputy = useEmsFdState((state) => state.setActiveDeputy);
-
-  const { hasPermissions } = usePermission();
 
   const isDeputyOnDuty =
     (activeDeputy && activeDeputy.status?.shouldDo !== "SET_OFF_DUTY") ?? false;
@@ -43,16 +37,6 @@ export default function EmsFdIncidents({ activeDeputy, incidents: initialData }:
     >
       <header className="flex items-center justify-between">
         <Title className="!mb-0">{t("incidents")}</Title>
-
-        {hasPermissions([Permissions.ManageIncidents]) ? (
-          <Button
-            title={!isDeputyOnDuty ? "You must have an active ems/fd deputy." : ""}
-            disabled={!isDeputyOnDuty}
-            onPress={() => modalState.openModal(ModalIds.ManageIncident)}
-          >
-            {t("createIncident")}
-          </Button>
-        ) : null}
       </header>
 
       <IncidentsTable initialData={initialData} isUnitOnDuty={isDeputyOnDuty} type="ems-fd" />

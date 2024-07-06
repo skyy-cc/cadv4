@@ -44,19 +44,19 @@ export function ApiVerification(props: Props) {
 
           <p className="font-medium leading-relaxed">
             We have detected an incorrect URL in your <code>.env</code> file or ENV in the
-            SnailyCAD. This means you will not be able to use SnailyCADv4 unless you resolve this
+            CAD. This means you will not be able to use the CAD unless you resolve this
             issue.
             <span className="my-2 block" />
-            SnailyCADv4 is designed to communicate to an API, which is hosted on a different URL.
+            CAD is designed to communicate to an API, which is hosted on a different URL.
             Browsers have a strict security policy (<code>CORS</code>) which requires this strict
-            configuration for SnailyCAD.
+            configuration for CAD.
           </p>
 
           <section className="mt-4">
             <h3 className="text-xl font-semibold mb-1">Your Configuration</h3>
             <p className="font-medium">
               The configuration that you have provided in your <code>.env</code> file or ENV in the
-              SnailyCAD Manager App:
+              CAD Manager App:
             </p>
 
             <ul className="leading-loose mt-1">
@@ -71,7 +71,7 @@ NEXT_PUBLIC_PROD_ORIGIN="${process.env.NEXT_PUBLIC_PROD_ORIGIN}"`}
           <section className="mt-4">
             <h3 className="text-xl font-semibold mb-1">Accessing URL</h3>
             <p className="font-medium flex gap-2 items-center">
-              The URL you are correct using to access SnailyCAD:
+              The URL you are correct using to access CAD:
             </p>
 
             <pre suppressHydrationWarning className="bg-secondary rounded-md p-2 mt-3">
@@ -89,8 +89,8 @@ NEXT_PUBLIC_PROD_ORIGIN="${process.env.NEXT_PUBLIC_PROD_ORIGIN}"`}
             <p className="font-medium leading-relaxed">
               After you have read the above that explains why this happens and what the issue
               exactly is, you can resolve this issue by, making sure that the{" "}
-              <code>CORS_ORIGIN_URL</code> in your <code>.env</code> file or ENV in the SnailyCAD
-              Manager App matches the URL you are using to access SnailyCAD.
+              <code>CORS_ORIGIN_URL</code> in your <code>.env</code> file or ENV in the CAD
+              Manager App matches the URL you are using to access CAD.
               <span className="my-2 block" />
               If that is the case, this is most likely a different issue.{" "}
               <span className="font-medium">
@@ -109,7 +109,7 @@ NEXT_PUBLIC_PROD_ORIGIN="${process.env.NEXT_PUBLIC_PROD_ORIGIN}"`}
               <a
                 target="_blank"
                 className="font-semibold underline"
-                href="https://discord.gg/eGnrPqEH7U"
+                href="https://discord.gg/scTqDzktND"
                 rel="noreferrer"
               >
                 Discord Support Server
@@ -130,14 +130,14 @@ NEXT_PUBLIC_PROD_ORIGIN="${process.env.NEXT_PUBLIC_PROD_ORIGIN}"`}
         <div className="p-2 max-w-2xl">
           <h1 className="flex items-center gap-2 font-bold text-2xl mb-3">
             <ExclamationDiamondFill className="fill-red-400" />
-            Could not connect to your SnailyCAD API.
+            Could not connect to the KCDOJRP API.
           </h1>
 
           <p className="font-medium leading-relaxed">
-            SnailyCAD was not able to connect to your SnailyCAD API. This means you will not be able
-            to use SnailyCADv4 unless you resolve this issue.
+            The CAD was not able to connect to the KCDOJRP API. This means you will not be able
+            to use the CAD unless you resolve this issue.
             <span className="my-2 block" />
-            SnailyCADv4 is designed to communicate to an API, which is hosted on a different URL. We
+            CAD is designed to communicate to an API, which is hosted on a different URL. We
             have detected issues that block the communication of this system.
           </p>
 
@@ -145,7 +145,7 @@ NEXT_PUBLIC_PROD_ORIGIN="${process.env.NEXT_PUBLIC_PROD_ORIGIN}"`}
             <h3 className="text-xl font-semibold mb-1">Your Configuration</h3>
             <p className="font-medium">
               The configuration that you have provided in your <code>.env</code> file or ENV in the
-              SnailyCAD Manager App:
+              CAD Manager App:
             </p>
 
             <ul className="leading-loose mt-1">
@@ -160,7 +160,7 @@ NEXT_PUBLIC_PROD_ORIGIN="${process.env.NEXT_PUBLIC_PROD_ORIGIN}"`}
           <section className="mt-4">
             <h3 className="text-xl font-semibold mb-1">Accessing URL</h3>
             <p className="font-medium flex gap-2 items-center">
-              The URL you are correct using to access SnailyCAD:
+              The URL you are correct using to access CAD:
             </p>
 
             <pre suppressHydrationWarning className="bg-secondary rounded-md p-2 mt-3">
@@ -186,9 +186,9 @@ NEXT_PUBLIC_PROD_ORIGIN="${process.env.NEXT_PUBLIC_PROD_ORIGIN}"`}
                     className="text-blue-400 underline"
                     href={process.env.NEXT_PUBLIC_PROD_ORIGIN}
                   >
-                    Your SnailyCAD API is accessible.
+                    The KCDOJRP API is accessible.
                   </a>{" "}
-                  (It should show your SnailyCAD version)
+                  (It should show your CAD version)
                 </li>
 
                 <li>
@@ -202,7 +202,7 @@ NEXT_PUBLIC_PROD_ORIGIN="${process.env.NEXT_PUBLIC_PROD_ORIGIN}"`}
                   </a>
                 </li>
                 <li>
-                  Your SnailyCAD API URL ends with <code>/v1</code>.
+                  Your CAD API URL ends with <code>/v1</code>.
                 </li>
               </ul>
               <span className="my-2 block" />
@@ -223,7 +223,7 @@ NEXT_PUBLIC_PROD_ORIGIN="${process.env.NEXT_PUBLIC_PROD_ORIGIN}"`}
               <a
                 target="_blank"
                 className="font-semibold underline"
-                href="https://discord.gg/eGnrPqEH7U"
+                href="https://discord.gg/scTqDzktND"
                 rel="noreferrer"
               >
                 Discord Support Server
@@ -257,10 +257,10 @@ NEXT_PUBLIC_PROD_ORIGIN="${process.env.NEXT_PUBLIC_PROD_ORIGIN}"`}
         <a
           target="_blank"
           className="font-semibold underline"
-          href="https://discord.gg/eGnrPqEH7U"
+          href="https://discord.gg/scTqDzktND"
           rel="noreferrer"
         >
-          Discord Support Server
+          Discord Server
         </a>
         .
       </p>
