@@ -48,7 +48,7 @@ export const towIncludes = {
 @Controller("/tow")
 @UseBeforeEach(IsAuth)
 @ContentType("application/json")
-@IsFeatureEnabled({ feature: Feature.TAXI })
+@IsFeatureEnabled({ feature: Feature.TOW })
 export class TowController {
   private socket: Socket;
   constructor(socket: Socket) {
